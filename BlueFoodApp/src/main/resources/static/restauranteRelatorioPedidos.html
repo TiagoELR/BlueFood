@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/bf_stiloSistema.css" rel="stylesheet" type="text/css"/>
+        <title>BlueFood</title>
+    </head>
+    <body>
+        <header>
+            <div id="dvLogotipoSistema">
+                <a href="">
+                    <img id="imgLogotipoSistema" src="images/bf_logotipoSistema.png" alt="Logo"/>
+                </a>
+            </div>
+            <div id="divUsuarioLogado">
+                Olá Nome do Usuário!
+                
+            </div>
+        </header>
+        <br><br>
+        <!-- Cabeçalho - Fim -->
+
+        <div>
+            <h1>Relatório de Pedidos</h1>
+            <fieldset>
+                <legend>Filtros</legend>
+                <label for="numero">Número: </label><br>	
+                <input type="text" name="numero" id="numero"><br>
+                <label for="inicio">Início: </label><br>	
+                <input type="date" name="inicio" id="inicio"><br>
+                <label for="fim">Fim: </label><br>	
+                <input type="date" name="fim" id="fim"><br>
+                <input type="button" value="Buscar">
+            </fieldset>
+        </div>
+        <br><br>
+
+        <table>
+            <tr>
+                <th>Pedido</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td><input type="submit" value="#35334"></td>
+                <td>Samuel</td>
+                <td>Rua das Flores 75</td>
+                <td>R$ 65,00</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="#3452"></td>
+                <td>Henrique</td>
+                <td>Avenida dos Estados 51</td>
+                <td>R$ 95,00</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="#6543"></td>
+                <td>Pedro</td>
+                <td>Rua Marambá 775</td>
+                <td>R$ 32,00</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="#35334"></td>
+                <td>Ivo</td>
+                <td>Rua XV de Novembro 11</td>
+                <td>R$ 65,00</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="#3452"></td>
+                <td>Bruno</td>
+                <td>Avenida Atlântica 889</td>
+                <td>R$ 95,00</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="#6543"></td>
+                <td>Evandro</td>
+                <td>Rua José Antônio 5655</td>
+                <td>R$ 32,00</td>
+            </tr>
+        </table>
+        <br><br>
+
+        <input type="button" value="Voltar">
+
+        <!-- Rodapé - Início -->
+        <br><br>
+    </body>
+</html>

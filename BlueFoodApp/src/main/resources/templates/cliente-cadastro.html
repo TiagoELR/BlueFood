@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html 
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+
+<body>
+<div layout:fragment="content">
+<div>
+<h1>Cadastro de Cliente</h1>
+<div class="clsSucess" th:if="${msg != null}">
+<span th:text="${msg}"></span>
+</div><br><br/>
+<form method="post" th:object="${cliente}" th:action="${!editMode} ? @{/public/cliente/save} : @{/cliente/save}">
+<fieldset>
+<input type="hidden" th:field="*{id}"/>
+<label for="nome">Nome: </label><br/>
+<input type="text" id="nome" name="nome" placeholder="Nome..." th:field="*{nome}"/><br><br/>
+<div class="clsErro" th:if="${#fields.hasErrors('nome')}">
+<span th:errors="*{nome}"></span>
+</div>
+<label for="cpf">CPF: </label><br/>
+<input type="text" id="cpf" name="cpf" placeholder="CPF..." th:field="*{cpf}"/><br><br/>
+<div class="clsErro" th:if="${#fields.hasErrors('cpf')}">
+<span th:errors="*{cpf}"></span>
+</div>
+
+<label for="email">E-mail: </label><br/>
+<input type="text" id="email" name="email" placeholder="E-mail..." th:field="*{email}"/><br><br/>
+<div class="clsErro" th:if="${#fields.hasErrors('email')}">
+<span th:errors="*{email}"></span>
+</div>
+
+<label for="telefone">Telefone: </label><br/>
+<input type="text" id="telefone" name="telefone" placeholder="Telefone..." th:field="*{telefone}"/><br><br/>
+<div class="clsErro" th:if="${#fields.hasErrors('telefone')}">
+<span th:errors="*{telefone}"></span>
+</div>
+
+<label for="cep">CEP: </label><br/>
+<input type="text" id="cep" name="cep" placeholder="CEP..." th:field="*{cep}"/><br><br/>
+<div class="clsErro" th:if="${#fields.hasErrors('cep')}">
+<span th:errors="*{cep}"></span>
+</div>
+<div th:if="${!editMode}">
+    <label for="senha">Senha: </label><br/>
+    <input type="password" id="senha" name="senha" placeholder="Senha..." th:field="*{senha}"/><br><br/>
+    <div class="clsErro" th:if="${#fields.hasErrors('senha')}">
+        <span th:errors="*{senha}"></span>
+    </div>
+</div> 
+    <input type="hidden" name="senha" value="*" th:if="${editMode}" />
+<input type="submit" th:value="${editMode} ? 'Alterar' : 'cadastrar' "/>        
+</fieldset>
+</form>
+      <input type="button" value="Voltar" th:onclick="'location.href=\''+@{/cliente/home}+'\';'" />
+<br><br/>
+</div>
+</div> 
+</body>
+</html>

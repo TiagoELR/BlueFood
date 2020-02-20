@@ -1,0 +1,128 @@
+*{
+    font-family: "Verdana";
+}
+body{
+    text-align: center;
+    margin: 0px;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1{
+    border: 5px solid #0099ff ;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+}
+input, textArea,select{
+    height: 28px;
+}
+textArea{
+    width: 400px;
+    height: 100px;
+}
+fieldset{
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+input[type=text],
+input[type=password],
+select{
+    font-size: 16px;
+    width: 200px;
+    padding-left: 8px;
+}
+input[type=button],
+input[type=submit]
+{
+    background-color: #0033cc; 
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 3px;
+}
+input[type=button]:hover{
+    
+    background-color: #3366ff;
+}
+#inputSelecionado{
+    background-color: #96c5ee;
+    border-color: #1e9bde;
+}
+table{
+    background-color: #99ccff;
+    font-size: 14px;
+    margin: auto;
+    border-spacing: 1px;
+}
+
+tr:nth-child(even){
+    background-color: #cccccc;
+}
+tr:nth-child(odd){
+    background-color: #ffffff;
+}
+#dvLogotipoSistema{
+    background-color: #0099ff;
+    height: 70px;
+}
+#imgLogotipoSistema{
+    height: 60%;
+    margin-top: 15px;
+}
+#imgUsuario{
+    width: 100px;
+}
+.clsErro{
+    background-color: #d40000;
+    margin: auto;
+    width: 400px;
+    border-radius: 10px;
+}
+#divUsuarioLogado{
+    background-color: #33ccff;
+    color: #ffffff;
+    min-height: 40px;
+}
+#imgIconeCarrinho{
+    height: 50px;
+}
+.clsCategoriaComida{
+    float: left;
+    height: 130px;
+}
+.clsCategoriaComidaGeral{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.imgCategoria{
+    margin-top: 10px;
+    height: 40%;
+}
+.imgRestaurante{
+    height: 130px;
+}
+.clsRestaurante{
+    width: 400px;
+    margin: auto;
+}
+.clsSucess{
+    background-color: #0baf00;
+    width: 400px;
+    margin: auto;
+    border-radius: 5px;
+    color: #000000;
+    padding: 10px;
+    margin-top: 10px;
+}
+#itemImg{
+    width: 200px;
+}
+#iconCarrinho{
+    width: 100px;
+}

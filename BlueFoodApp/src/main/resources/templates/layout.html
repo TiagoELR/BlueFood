@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <link th:href="@{/css/bf_stiloSistema.css}" rel="stylesheet" type="text/css" />
+        <script th:src="@{/js/index.js}" type="text/javascript"></script>
+        <title>BlueFood</title>
+    </head>
+    <body>
+        <header>
+            <div id="dvLogotipoSistema">
+                <a th:href="${link} == null ? @{/} : ${link}">
+                    <img id="imgLogotipoSistema" th:src="@{/images/bf_logotipoSistema.png}" alt="Logo"/>
+                </a>
+            </div>
+            <div id="divUsuarioLogado" th:if="${#authentication.principal != 'anonymousUser' }">
+                <span th:text="'Olá, ' + ${#authentication.principal.usuario.nome} +'!' "></span>
+            </div>
+            <div th:if="${session.carrinho != null}" style="display: inline;">
+                <a th:href="@{/cliente/carrinho/visualizar}">
+                    <img id="iconCarrinho" th:src="@{/images/bf_iconeCarrinho.png}"/>
+                </a>
+            </div>
+        </header>
+        <br/>
+
+        <div layout:fragment="content"></div>
+        <!--Rodapé - Início -->
+    </body>
+</html>
